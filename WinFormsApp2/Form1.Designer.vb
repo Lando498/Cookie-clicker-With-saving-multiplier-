@@ -22,84 +22,101 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Cookie = New Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Counter = New TextBox()
-        TextBox1 = New TextBox()
         multplus = New Button()
-        TextBox2 = New TextBox()
         MultCounter = New TextBox()
+        Cookie = New Button()
+        Label1 = New Label()
+        Label2 = New Label()
         SuspendLayout()
-        ' 
-        ' Cookie
-        ' 
-        Cookie.Image = My.Resources.Resources.cookie
-        Cookie.Location = New Point(11, 12)
-        Cookie.Name = "Cookie"
-        Cookie.Size = New Size(507, 519)
-        Cookie.TabIndex = 0
-        Cookie.UseVisualStyleBackColor = True
         ' 
         ' Counter
         ' 
-        Counter.Location = New Point(596, 45)
+        Counter.Enabled = False
+        Counter.ForeColor = Color.Black
+        Counter.Location = New Point(670, 60)
+        Counter.Margin = New Padding(3, 4, 3, 4)
         Counter.Name = "Counter"
-        Counter.Size = New Size(32, 23)
+        Counter.Size = New Size(62, 27)
         Counter.TabIndex = 1
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(524, 45)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(66, 23)
-        TextBox1.TabIndex = 2
-        TextBox1.Text = "Cookies:"
         ' 
         ' multplus
         ' 
-        multplus.Location = New Point(524, 74)
+        multplus.Location = New Point(599, 99)
+        multplus.Margin = New Padding(3, 4, 3, 4)
         multplus.Name = "multplus"
-        multplus.Size = New Size(104, 42)
+        multplus.Size = New Size(119, 56)
         multplus.TabIndex = 3
         multplus.Text = "+1 Multiplier Cost 100 cookies"
         multplus.UseVisualStyleBackColor = True
         ' 
-        ' TextBox2
-        ' 
-        TextBox2.Location = New Point(524, 122)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(66, 23)
-        TextBox2.TabIndex = 5
-        TextBox2.Text = "Multiplier:"
-        ' 
         ' MultCounter
         ' 
-        MultCounter.Location = New Point(596, 122)
+        MultCounter.Enabled = False
+        MultCounter.ForeColor = Color.Black
+        MultCounter.Location = New Point(670, 163)
+        MultCounter.Margin = New Padding(3, 4, 3, 4)
         MultCounter.Name = "MultCounter"
-        MultCounter.Size = New Size(32, 23)
+        MultCounter.Size = New Size(62, 27)
         MultCounter.TabIndex = 4
+        ' 
+        ' Cookie
+        ' 
+        Cookie.BackColor = Color.Transparent
+        Cookie.FlatAppearance.BorderSize = 0
+        Cookie.FlatAppearance.MouseDownBackColor = Color.Transparent
+        Cookie.FlatAppearance.MouseOverBackColor = Color.Transparent
+        Cookie.FlatStyle = FlatStyle.Flat
+        Cookie.ForeColor = Color.Transparent
+        Cookie.Image = CType(resources.GetObject("Cookie.Image"), Image)
+        Cookie.Location = New Point(-3, 28)
+        Cookie.Name = "Cookie"
+        Cookie.Size = New Size(596, 628)
+        Cookie.TabIndex = 6
+        Cookie.UseVisualStyleBackColor = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(598, 166)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(76, 20)
+        Label1.TabIndex = 7
+        Label1.Text = "Multiplier:"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(600, 63)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(64, 20)
+        Label2.TabIndex = 8
+        Label2.Text = "Cookies:"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(640, 543)
-        Controls.Add(TextBox2)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(731, 724)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(Cookie)
         Controls.Add(MultCounter)
         Controls.Add(multplus)
-        Controls.Add(TextBox1)
         Controls.Add(Counter)
-        Controls.Add(Cookie)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "Form1"
         Text = "Form1"
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Cookie As Button
     Friend WithEvents Counter As TextBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents multplus As Button
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents MultCounter As TextBox
+    Friend WithEvents Cookie As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 
 End Class

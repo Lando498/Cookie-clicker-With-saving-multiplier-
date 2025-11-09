@@ -2,7 +2,7 @@
 Public Class Form1
     Private MultCostPath = "MultCost.txt"
     Private MultCost = 100
-    Private Multiplier = 0
+    Private Multiplier = 1
     Private Cookies = 0
     Private SavePath As String = "cookies.txt"
     Private MultPath As String = "Multiplier.txt"
@@ -24,7 +24,7 @@ Public Class Form1
                 Dim text As String = File.ReadAllText(MultPath)
                 Multiplier = Integer.Parse(text)
             Catch
-                Multiplier = 0
+                Multiplier = 1
             End Try
             MultCounter.Text = Multiplier.ToString()
         End If
@@ -50,15 +50,15 @@ Public Class Form1
     End Sub
 
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub multplus_Click(sender As Object, e As EventArgs) Handles multplus.Click
-        If Cookies > 100 Then
+        If Cookies > MultCost Then
             Multiplier += 1
             Cookies -= MultCost
-            MultCost += 200
+            MultCost += 100
             multplus.Text = "+1 Multiplier Cost " & MultCost
             Counter.Text = Cookies.ToString()
             MultCounter.Text = Multiplier.ToString()
