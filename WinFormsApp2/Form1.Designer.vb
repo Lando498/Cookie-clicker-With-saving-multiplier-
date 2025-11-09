@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Counter = New TextBox()
         multplus = New Button()
         MultCounter = New TextBox()
@@ -69,7 +68,7 @@ Partial Class Form1
         Cookie.FlatAppearance.MouseOverBackColor = Color.Transparent
         Cookie.FlatStyle = FlatStyle.Flat
         Cookie.ForeColor = Color.Transparent
-        Cookie.Image = CType(resources.GetObject("Cookie.Image"), Image)
+        Cookie.Image = My.Resources.Resources.PerfectCookie_removebg_preview
         Cookie.Location = New Point(-3, 28)
         Cookie.Name = "Cookie"
         Cookie.Size = New Size(596, 628)
@@ -98,7 +97,7 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImage = My.Resources.Resources._320px_BgBlue
         ClientSize = New Size(731, 724)
         Controls.Add(Label2)
         Controls.Add(Label1)
